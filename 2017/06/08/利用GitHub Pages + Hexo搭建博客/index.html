@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="git,github,hexo,node.js,blog," />
 
 
 
@@ -95,15 +95,23 @@
 
 
 
-<meta name="description" content="Sometimes ever, sometimes never.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="F.C.Y">
-<meta property="og:url" content="http://fbambooz.github.io/index.html">
+<meta name="description" content="前言很久之前就想要搭建个人博客,但是因为懒惰、拖延,一直拖到现在,终于决定要去做了 现在就用这个博客来记录这两天我搭建博客的过程 关于GitHub Pages 和 Hexo的具体我就不多说了, 网上有很多相关介绍, 这里就主要记录下搭建的步骤 环境&amp;amp;版本  系统: windows 10 64位 软件: Cmder: v1.3.2 git: version 2.11.0.windows.1">
+<meta name="keywords" content="git,github,hexo,node.js,blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用GitHub Pages + Hexo搭建博客">
+<meta property="og:url" content="http://fbambooz.github.io/2017/06/08/利用GitHub Pages + Hexo搭建博客/index.html">
 <meta property="og:site_name" content="F.C.Y">
-<meta property="og:description" content="Sometimes ever, sometimes never.">
+<meta property="og:description" content="前言很久之前就想要搭建个人博客,但是因为懒惰、拖延,一直拖到现在,终于决定要去做了 现在就用这个博客来记录这两天我搭建博客的过程 关于GitHub Pages 和 Hexo的具体我就不多说了, 网上有很多相关介绍, 这里就主要记录下搭建的步骤 环境&amp;amp;版本  系统: windows 10 64位 软件: Cmder: v1.3.2 git: version 2.11.0.windows.1">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/home_of_github.png">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/create_a_new_repository.png">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/cmder.png">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/add_new_ssh_key.png">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/nodejs.png">
+<meta property="og:updated_time" content="2017-06-08T18:39:41.957Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="F.C.Y">
-<meta name="twitter:description" content="Sometimes ever, sometimes never.">
+<meta name="twitter:title" content="利用GitHub Pages + Hexo搭建博客">
+<meta name="twitter:description" content="前言很久之前就想要搭建个人博客,但是因为懒惰、拖延,一直拖到现在,终于决定要去做了 现在就用这个博客来记录这两天我搭建博客的过程 关于GitHub Pages 和 Hexo的具体我就不多说了, 网上有很多相关介绍, 这里就主要记录下搭建的步骤 环境&amp;amp;版本  系统: windows 10 64位 软件: Cmder: v1.3.2 git: version 2.11.0.windows.1">
+<meta name="twitter:image" content="http://or8rxwtgb.bkt.clouddn.com/home_of_github.png">
 
 
 
@@ -131,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://fbambooz.github.io/"/>
+  <link rel="canonical" href="http://fbambooz.github.io/2017/06/08/利用GitHub Pages + Hexo搭建博客/"/>
 
 
 
 
 
-  <title>F.C.Y</title>
+  <title>利用GitHub Pages + Hexo搭建博客 | F.C.Y</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -172,9 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,9 +263,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -285,9 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/08/利用GitHub Pages + Hexo搭建博客/" itemprop="url">利用GitHub Pages + Hexo搭建博客</a></h1>
+          <h1 class="post-title" itemprop="name headline">利用GitHub Pages + Hexo搭建博客</h1>
         
 
         <div class="post-meta">
@@ -345,9 +349,7 @@
       
 
       
-        
-          
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很久之前就想要搭建个人博客,但是因为懒惰、拖延,一直拖到现在,终于决定要去做了</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很久之前就想要搭建个人博客,但是因为懒惰、拖延,一直拖到现在,终于决定要去做了</p>
 <p>现在就用这个博客来记录这两天我搭建博客的过程</p>
 <p>关于GitHub Pages 和 Hexo的具体我就不多说了, 网上有很多相关介绍, 这里就主要记录下搭建的步骤</p>
 <h1 id="环境-amp-版本"><a href="#环境-amp-版本" class="headerlink" title="环境&amp;版本"></a>环境&amp;版本</h1><blockquote>
@@ -452,42 +454,64 @@
 <p><a href="http://code.youmeek.com/2016/02/28/2016/02/Hexo/#创建-Hexo-项目" target="_blank" rel="external">使用 Github 空间搭建 Hexo 技术博客–安装篇（基于 IntelliJ IDEA）</a></p>
 <p><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/node-js/" rel="tag"># node.js</a>
+          
+            <a href="/tags/blog/" rel="tag"># blog</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -495,6 +519,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -514,8 +542,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/little_panda.jpg"
@@ -586,6 +623,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#环境-amp-版本"><span class="nav-number">2.</span> <span class="nav-text">环境&版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置GitHub"><span class="nav-number">3.</span> <span class="nav-text">配置GitHub</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装git"><span class="nav-number">4.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置和使用GitHub"><span class="nav-number">5.</span> <span class="nav-text">配置和使用GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置用户信息"><span class="nav-number">5.1.</span> <span class="nav-text">设置用户信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置SSH-key"><span class="nav-number">5.2.</span> <span class="nav-text">配置SSH key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加SSH-key到GitHub"><span class="nav-number">5.3.</span> <span class="nav-text">添加SSH key到GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试是否成功添加SSH-key"><span class="nav-number">5.4.</span> <span class="nav-text">测试是否成功添加SSH key</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Node-js"><span class="nav-number">6.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Hexo"><span class="nav-number">7.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改Hexo配置"><span class="nav-number">8.</span> <span class="nav-text">修改Hexo配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署博客"><span class="nav-number">9.</span> <span class="nav-text">部署博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">10.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">11.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -711,10 +764,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
