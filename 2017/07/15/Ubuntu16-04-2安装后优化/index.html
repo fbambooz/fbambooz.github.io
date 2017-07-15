@@ -1,0 +1,923 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux,ubuntu," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="F.C.Y" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/little_panda.jpg?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="因为学习需要，经常会装ubuntu，这里记录下装16.04.2后对系统的优化。 删除不常用的系统自带软件1$sudo apt remove libreoffice-common unity-webapps-common thunderbird totem rhythmbox simple-scan gnome-mahjongg aisleriot gnome-mines cheese gnome-">
+<meta name="keywords" content="linux,ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu16.04.2安装后优化">
+<meta property="og:url" content="http://fbambooz.com/2017/07/15/Ubuntu16-04-2安装后优化/index.html">
+<meta property="og:site_name" content="F.C.Y">
+<meta property="og:description" content="因为学习需要，经常会装ubuntu，这里记录下装16.04.2后对系统的优化。 删除不常用的系统自带软件1$sudo apt remove libreoffice-common unity-webapps-common thunderbird totem rhythmbox simple-scan gnome-mahjongg aisleriot gnome-mines cheese gnome-">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/indicator-sysmonitor.png">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/indicator-sysmonitor-perferences-general.png">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/indicator-sysmonitor-perferences-advanced.png">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/flatabulous-theme.png">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/ultra-flat-icons.png">
+<meta property="og:image" content="http://or8rxwtgb.bkt.clouddn.com/ubuntu_desktop.png">
+<meta property="og:updated_time" content="2017-07-15T09:22:40.072Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ubuntu16.04.2安装后优化">
+<meta name="twitter:description" content="因为学习需要，经常会装ubuntu，这里记录下装16.04.2后对系统的优化。 删除不常用的系统自带软件1$sudo apt remove libreoffice-common unity-webapps-common thunderbird totem rhythmbox simple-scan gnome-mahjongg aisleriot gnome-mines cheese gnome-">
+<meta name="twitter:image" content="http://or8rxwtgb.bkt.clouddn.com/indicator-sysmonitor.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://fbambooz.com/2017/07/15/Ubuntu16-04-2安装后优化/"/>
+
+
+
+
+
+  <title>Ubuntu16.04.2安装后优化 | F.C.Y</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-100634120-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">F.C.Y</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://fbambooz.com/2017/07/15/Ubuntu16-04-2安装后优化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fbambooz">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/little_panda.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="F.C.Y">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Ubuntu16.04.2安装后优化</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-15T17:17:25+08:00">
+                2017-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/15/Ubuntu16-04-2安装后优化/" class="leancloud_visitors" data-flag-title="Ubuntu16.04.2安装后优化">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>因为学习需要，经常会装ubuntu，这里记录下装16.04.2后对系统的优化。</p>
+<h1 id="删除不常用的系统自带软件"><a href="#删除不常用的系统自带软件" class="headerlink" title="删除不常用的系统自带软件"></a>删除不常用的系统自带软件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo apt remove libreoffice-common unity-webapps-common thunderbird totem rhythmbox simple-scan gnome-mahjongg aisleriot gnome-mines cheese gnome-sudoku transmission-common gnome-orca webbrowser-app deja-dup onboard remmina</div></pre></td></tr></table></figure>
+<blockquote>
+<p>liboffice-common 系统自带offic，用处不打，可用wps代替<br>unity-webapps-common Amazon链接<br>thunderbird 雷鸟邮件客户端<br>totem 自带的播放器<br>rhythmbox 自带的音乐播放器<br>simple-scan 扫描仪<br>gnome-mahjongg 麻将对对碰<br>aisleriot 纸牌<br>gnome-mines 扫雷<br>cheese webcam应用<br>gnome-sudoku 数独<br>transmission-common BT客户端<br>gnome-orca 屏幕阅读<br>webbrowser-app 自带的浏览器<br>deja-dup 备份<br>onboard 屏幕键盘<br>remmina 远程桌面</p>
+</blockquote>
+<h1 id="安装VIM"><a href="#安装VIM" class="headerlink" title="安装VIM"></a>安装VIM</h1><p>ubuntu自带的是VI，而我更喜欢用VIM<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo apt install vim</div></pre></td></tr></table></figure></p>
+<h1 id="更换源为阿里云源"><a href="#更换源为阿里云源" class="headerlink" title="更换源为阿里云源"></a>更换源为阿里云源</h1><h2 id="备份原有源"><a href="#备份原有源" class="headerlink" title="备份原有源"></a>备份原有源</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bk</div></pre></td></tr></table></figure>
+<h2 id="用vim修改-etc-apt-sources-list"><a href="#用vim修改-etc-apt-sources-list" class="headerlink" title="用vim修改/etc/apt/sources.list"></a>用vim修改/etc/apt/sources.list</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo vim /etc/apt/sources.list</div></pre></td></tr></table></figure>
+<h2 id="修改为阿里云的源"><a href="#修改为阿里云的源" class="headerlink" title="修改为阿里云的源"></a>修改为阿里云的源</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse</div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse</div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse</div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse</div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse</div></pre></td></tr></table></figure>
+<h2 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo apt update</div></pre></td></tr></table></figure>
+<h1 id="安装Google拼音"><a href="#安装Google拼音" class="headerlink" title="安装Google拼音"></a>安装Google拼音</h1><p>输入法是看个人的喜好，我这里个人喜欢使用Google pinyin，简单，轻便。<br>下载googlepinyin<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo apt install fcitx-googlepinyin</div></pre></td></tr></table></figure></p>
+<p>在 <em>系统设置（seetings）</em> -&gt; <em>语言支持（Language Support）</em> 里将 <em>键盘输入法系统（keyboard input method system）</em> 设置为 <em>fcitx</em></p>
+<p>重启系统</p>
+<p>在 <em>系统设置（seetings）</em> -&gt; <em>文本输入（Text Entry）</em> 里添加 <em>Googlepinyin</em> 即可</p>
+<h1 id="安装Google-Chrome"><a href="#安装Google-Chrome" class="headerlink" title="安装Google Chrome"></a>安装Google Chrome</h1><h2 id="添加google公钥，用于对下载软件进行验证"><a href="#添加google公钥，用于对下载软件进行验证" class="headerlink" title="添加google公钥，用于对下载软件进行验证"></a>添加google公钥，用于对下载软件进行验证</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add –</div></pre></td></tr></table></figure>
+<h2 id="添加Google-Chrome-PPA"><a href="#添加Google-Chrome-PPA" class="headerlink" title="添加Google Chrome PPA"></a>添加Google Chrome PPA</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># sudo sh -c &apos;echo &quot;deb http://dl.google.com/linux/chrome/deb/ stable main&quot; &gt;&gt; /etc/apt/sources.list.d/google.list&apos;</div></pre></td></tr></table></figure>
+<h2 id="安装Chrome"><a href="#安装Chrome" class="headerlink" title="安装Chrome"></a>安装Chrome</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># sudo apt update</div><div class="line"># sudo apt install google-chrome-stable</div></pre></td></tr></table></figure>
+<p>接下来就可以使用Chrome了，这种方法的好处是不用下载deb包就能安装，当然你也可以通过下载deb包，然后直接安装。</p>
+<h1 id="安装indicator-sysmonitor"><a href="#安装indicator-sysmonitor" class="headerlink" title="安装indicator-sysmonitor"></a>安装indicator-sysmonitor</h1><p>这是一款能够实时查看系统当前cpu，内存，网络等信息的软件。<br><img src="http://or8rxwtgb.bkt.clouddn.com/indicator-sysmonitor.png" alt="indicator-sysmonitor"></p>
+<p>因为这是ppa源软件，需要先添加ppa源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor</div><div class="line"># sudo apt update</div><div class="line"># sudo apt intall indicator-sysmonitor</div></pre></td></tr></table></figure></p>
+<p>安装完成后，可以在软件列表中选择执行，也可以终端执行 <code>indicator-sysmonitor &amp;</code>,右键点击右上角标题栏上图标，选择 <code>Perferences</code> 选项，勾选 <code>Run on startup</code>即可开机启动。<br><img src="http://or8rxwtgb.bkt.clouddn.com/indicator-sysmonitor-perferences-general.png" alt="indicator-sysmonitor-perferences-general"></p>
+<p>切换到 <code>Advanced</code>，对要显示的信息进行自定义设置<br><img src="http://or8rxwtgb.bkt.clouddn.com/indicator-sysmonitor-perferences-advanced.png" alt="indicator-sysmonitor-perferences-advanced"></p>
+<h1 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h1><h2 id="安装Unity图形管理工具"><a href="#安装Unity图形管理工具" class="headerlink" title="安装Unity图形管理工具"></a>安装Unity图形管理工具</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># sudo apt install unity-tweak-tool</div></pre></td></tr></table></figure>
+<h2 id="安装Flatabulous主题"><a href="#安装Flatabulous主题" class="headerlink" title="安装Flatabulous主题"></a>安装Flatabulous主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># sudo add-apt-repository ppa:noobslab/themes</div><div class="line"># sudo apt update</div><div class="line"># sudo apt install flatabulous-theme</div></pre></td></tr></table></figure>
+<h2 id="安装ultra-flat图标"><a href="#安装ultra-flat图标" class="headerlink" title="安装ultra-flat图标"></a>安装ultra-flat图标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># sudo add-apt-repository ppa:noobslab/icons</div><div class="line"># sudo apt update</div><div class="line"># sudo apt install ultra-flat-icons</div></pre></td></tr></table></figure>
+<p>在unity-tweak-tool中更换主题和图标<br><img src="http://or8rxwtgb.bkt.clouddn.com/flatabulous-theme.png" alt="flatabulous"><br><img src="http://or8rxwtgb.bkt.clouddn.com/ultra-flat-icons.png" alt="ultra-flat"></p>
+<p>还可以根据自己的喜好更换桌面背景，这里推荐一个网站<a href="https://www.pexels.com/" target="_blank" rel="external">PEXELS</a>，里面全是免费高清图。</p>
+<p>下面是我美化后的桌面<br><img src="http://or8rxwtgb.bkt.clouddn.com/ubuntu_desktop.png" alt="ubuntu-desktop"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+          
+            <a href="/tags/ubuntu/" rel="tag"><i class="fa fa-tag"></i> ubuntu</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/25/Centos6.5安装OpenStack Icehouse版本/" rel="next" title="Centos6.5安装OpenStack Icehouse版本">
+                <i class="fa fa-chevron-left"></i> Centos6.5安装OpenStack Icehouse版本
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/little_panda.jpg"
+               alt="Fbambooz" />
+          <p class="site-author-name" itemprop="name">Fbambooz</p>
+           
+              <p class="site-description motion-element" itemprop="description">Sometimes ever, sometimes never.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/fbambooz" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:fbambooz@gmail.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#删除不常用的系统自带软件"><span class="nav-number">1.</span> <span class="nav-text">删除不常用的系统自带软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装VIM"><span class="nav-number">2.</span> <span class="nav-text">安装VIM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更换源为阿里云源"><span class="nav-number">3.</span> <span class="nav-text">更换源为阿里云源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#备份原有源"><span class="nav-number">3.1.</span> <span class="nav-text">备份原有源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用vim修改-etc-apt-sources-list"><span class="nav-number">3.2.</span> <span class="nav-text">用vim修改/etc/apt/sources.list</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改为阿里云的源"><span class="nav-number">3.3.</span> <span class="nav-text">修改为阿里云的源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新源"><span class="nav-number">3.4.</span> <span class="nav-text">更新源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Google拼音"><span class="nav-number">4.</span> <span class="nav-text">安装Google拼音</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Google-Chrome"><span class="nav-number">5.</span> <span class="nav-text">安装Google Chrome</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加google公钥，用于对下载软件进行验证"><span class="nav-number">5.1.</span> <span class="nav-text">添加google公钥，用于对下载软件进行验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加Google-Chrome-PPA"><span class="nav-number">5.2.</span> <span class="nav-text">添加Google Chrome PPA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Chrome"><span class="nav-number">5.3.</span> <span class="nav-text">安装Chrome</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装indicator-sysmonitor"><span class="nav-number">6.</span> <span class="nav-text">安装indicator-sysmonitor</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题美化"><span class="nav-number">7.</span> <span class="nav-text">主题美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Unity图形管理工具"><span class="nav-number">7.1.</span> <span class="nav-text">安装Unity图形管理工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Flatabulous主题"><span class="nav-number">7.2.</span> <span class="nav-text">安装Flatabulous主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装ultra-flat图标"><span class="nav-number">7.3.</span> <span class="nav-text">安装ultra-flat图标</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fbambooz</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" rel="external nofollow">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("uCBo8gx3JhS2BXXmko4KlYCV-gzGzoHsz", "vKoefqegLsVPiaPm1rpgc5Uz");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
