@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://fbambooz.com/2017/06/25/Centos6.5%E5%AE%89%E8%A3%85OpenStack%20Icehouse%E7%89%88%E6%9C%AC/</loc>
-    <lastmod>2017-07-18T08:16:18.385Z</lastmod>
+    <lastmod>2017-07-18T08:19:47.040Z</lastmod>
     <data>
         <display>
         <title>Centos6.5安装OpenStack Icehouse版本</title>
@@ -55,15 +55,15 @@
         <title>利用GitHub Pages + Hexo搭建博客</title>
         <pubTime>2017-06-08T15:23:47.000Z</pubTime>
         
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
         <tag>git</tag>
          
         <tag>github</tag>
          
-        <tag>hexo</tag>
-         
         <tag>node.js</tag>
-         
-        <tag>blog</tag>
          
          
            
@@ -82,9 +82,9 @@
         
         <tag>hexo</tag>
          
-        <tag>blog</tag>
-         
         <tag>NexT</tag>
+         
+        <tag>blog</tag>
          
          
            
